@@ -65,29 +65,29 @@ class ViewController: UIViewController {
 
     
     func showTabBar() {
-        UIView.animate(withDuration: 1.0/2, delay: 0.0/2, options: [], animations: {
+        UIView.animate(withDuration: 1.0, delay: 0.0, options: [], animations: {
             self.shapeView.frame = CGRect(x: self.shapeView.frame.origin.x, y: self.shapeView.frame.origin.y - 120, width: self.shapeView.frame.width, height: self.shapeView.frame.height)
             
             self.questionImage.alpha = 1.0
         }, completion: nil)
         
-        UIView.animate(withDuration: 0.5/2, delay: 0.1/2, options: [], animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.1, options: [], animations: {
             self.btn3.frame = CGRect(x: self.self.btn3.frame.origin.x, y: self.self.btn3.frame.origin.y - 60, width: self.self.btn3.frame.width, height: self.self.btn3.frame.height)
         }, completion: nil)
         
-        UIView.animate(withDuration: 0.5/2, delay: 0.2/2, options: [], animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.25, options: [], animations: {
             self.btn2.frame = CGRect(x: self.self.btn2.frame.origin.x, y: self.self.btn2.frame.origin.y - 60, width: self.self.btn2.frame.width, height: self.self.btn2.frame.height)
         }, completion: nil)
         
-        UIView.animate(withDuration: 0.5/2, delay: 0.2/2, options: [], animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.25, options: [], animations: {
             self.btn4.frame = CGRect(x: self.self.btn4.frame.origin.x, y: self.self.btn4.frame.origin.y - 60, width: self.self.btn4.frame.width, height: self.self.btn4.frame.height)
         }, completion: nil)
         
-        UIView.animate(withDuration: 0.5/2, delay: 0.3/2, options: [], animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.4, options: [], animations: {
             self.btn1.frame = CGRect(x: self.self.btn1.frame.origin.x, y: self.self.btn1.frame.origin.y - 60, width: self.self.btn1.frame.width, height: self.self.btn1.frame.height)
         }, completion: nil)
         
-        UIView.animate(withDuration: 0.5/2, delay: 0.3/2, options: [], animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.4, options: [], animations: {
             self.btn5.frame = CGRect(x: self.self.btn5.frame.origin.x, y: self.self.btn5.frame.origin.y - 60, width: self.self.btn5.frame.width, height: self.self.btn5.frame.height)
         }, completion: nil)
         
@@ -96,29 +96,29 @@ class ViewController: UIViewController {
     }
     
     func hideTabBar() {
-        UIView.animate(withDuration: 1.0/2, delay: 0.0, options: [], animations: {
+        UIView.animate(withDuration: 1.0, delay: 0.0, options: [], animations: {
             self.shapeView.frame = CGRect(x: self.shapeView.frame.origin.x, y: self.shapeView.frame.origin.y + 120, width: self.shapeView.frame.width, height: self.shapeView.frame.height)
             
             self.questionImage.alpha = 0.0
         }, completion: nil)
         
-        UIView.animate(withDuration: 0.5/2, delay: 0.1/2, options: [], animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.1, options: [], animations: {
             self.btn1.frame = CGRect(x: self.self.btn1.frame.origin.x, y: self.self.btn1.frame.origin.y + 60, width: self.self.btn1.frame.width, height: self.self.btn1.frame.height)
         }, completion: nil)
         
-        UIView.animate(withDuration: 0.5/2, delay: 0.1/2, options: [], animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.1, options: [], animations: {
             self.btn5.frame = CGRect(x: self.self.btn5.frame.origin.x, y: self.self.btn5.frame.origin.y + 60, width: self.self.btn5.frame.width, height: self.self.btn5.frame.height)
         }, completion: nil)
         
-        UIView.animate(withDuration: 0.5/2, delay: 0.3/2, options: [], animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.3, options: [], animations: {
             self.btn2.frame = CGRect(x: self.self.btn2.frame.origin.x, y: self.self.btn2.frame.origin.y + 60, width: self.self.btn2.frame.width, height: self.self.btn2.frame.height)
         }, completion: nil)
         
-        UIView.animate(withDuration: 0.5/2, delay: 0.3/2, options: [], animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.3, options: [], animations: {
             self.btn4.frame = CGRect(x: self.self.btn4.frame.origin.x, y: self.self.btn4.frame.origin.y + 60, width: self.self.btn4.frame.width, height: self.self.btn4.frame.height)
         }, completion: nil)
         
-        UIView.animate(withDuration: 0.5/2, delay: 0.4/2, options: [], animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.4, options: [], animations: {
             self.btn3.frame = CGRect(x: self.self.btn3.frame.origin.x, y: self.self.btn3.frame.origin.y + 60, width: self.self.btn3.frame.width, height: self.self.btn3.frame.height)
         }, completion: nil)
         
