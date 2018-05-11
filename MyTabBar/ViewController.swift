@@ -75,19 +75,19 @@ class ViewController: UIViewController {
             self.btn3.frame = CGRect(x: self.self.btn3.frame.origin.x, y: self.self.btn3.frame.origin.y - 60, width: self.self.btn3.frame.width, height: self.self.btn3.frame.height)
         }, completion: nil)
         
-        UIView.animate(withDuration: 0.5, delay: 0.25, options: [], animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.2, options: [], animations: {
             self.btn2.frame = CGRect(x: self.self.btn2.frame.origin.x, y: self.self.btn2.frame.origin.y - 60, width: self.self.btn2.frame.width, height: self.self.btn2.frame.height)
         }, completion: nil)
         
-        UIView.animate(withDuration: 0.5, delay: 0.25, options: [], animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.2, options: [], animations: {
             self.btn4.frame = CGRect(x: self.self.btn4.frame.origin.x, y: self.self.btn4.frame.origin.y - 60, width: self.self.btn4.frame.width, height: self.self.btn4.frame.height)
         }, completion: nil)
         
-        UIView.animate(withDuration: 0.5, delay: 0.4, options: [], animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.3, options: [], animations: {
             self.btn1.frame = CGRect(x: self.self.btn1.frame.origin.x, y: self.self.btn1.frame.origin.y - 60, width: self.self.btn1.frame.width, height: self.self.btn1.frame.height)
         }, completion: nil)
         
-        UIView.animate(withDuration: 0.5, delay: 0.4, options: [], animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.3, options: [], animations: {
             self.btn5.frame = CGRect(x: self.self.btn5.frame.origin.x, y: self.self.btn5.frame.origin.y - 60, width: self.self.btn5.frame.width, height: self.self.btn5.frame.height)
         }, completion: nil)
         
@@ -102,11 +102,11 @@ class ViewController: UIViewController {
             self.questionImage.alpha = 0.0
         }, completion: nil)
         
-        UIView.animate(withDuration: 0.5, delay: 0.1, options: [], animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.2, options: [], animations: {
             self.btn1.frame = CGRect(x: self.self.btn1.frame.origin.x, y: self.self.btn1.frame.origin.y + 60, width: self.self.btn1.frame.width, height: self.self.btn1.frame.height)
         }, completion: nil)
         
-        UIView.animate(withDuration: 0.5, delay: 0.1, options: [], animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.2, options: [], animations: {
             self.btn5.frame = CGRect(x: self.self.btn5.frame.origin.x, y: self.self.btn5.frame.origin.y + 60, width: self.self.btn5.frame.width, height: self.self.btn5.frame.height)
         }, completion: nil)
         
