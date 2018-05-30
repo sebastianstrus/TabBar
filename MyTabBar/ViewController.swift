@@ -9,9 +9,12 @@
 import UIKit
 
 
+var speed: Float = 2.0
 var tabBarVisible = false
+
 class ViewController: UIViewController {
 
+    @IBOutlet weak var twoButtonsView: UIView!
     @IBOutlet weak var rightButton: UIButton!
     
     @IBOutlet weak var shapeView: UIView!
@@ -41,6 +44,10 @@ class ViewController: UIViewController {
         
         
         
+        btn2.transform = CGAffineTransform(rotationAngle: self.radians(-30))
+        btn4.transform = CGAffineTransform(rotationAngle: self.radians(30))
+
+        
     }
 
     @IBAction func leftButtonPressed(_ sender: UIButton) {
@@ -65,66 +72,88 @@ class ViewController: UIViewController {
 
     
     func showTabBar() {
-        UIView.animate(withDuration: 1.0, delay: 0.0, options: [], animations: {
-            self.shapeView.frame = CGRect(x: self.shapeView.frame.origin.x, y: self.shapeView.frame.origin.y - 120, width: self.shapeView.frame.width, height: self.shapeView.frame.height)
+        UIView.animate(withDuration: TimeInterval(speed * 1.0), delay: 0.0, options: [], animations: {
+            self.shapeView.transform = CGAffineTransform(translationX: 0, y: -120)
             
             self.questionImage.alpha = 1.0
         }, completion: nil)
         
-        UIView.animate(withDuration: 0.5, delay: 0.1, options: [], animations: {
-            self.btn3.frame = CGRect(x: self.self.btn3.frame.origin.x, y: self.self.btn3.frame.origin.y - 60, width: self.self.btn3.frame.width, height: self.self.btn3.frame.height)
+        UIView.animate(withDuration: TimeInterval(speed * 0.5), delay: TimeInterval(speed * 0.2), options: [], animations: {
+            self.btn3.transform = CGAffineTransform(translationX: 0, y: -60)
         }, completion: nil)
         
-        UIView.animate(withDuration: 0.5, delay: 0.2, options: [], animations: {
-            self.btn2.frame = CGRect(x: self.self.btn2.frame.origin.x, y: self.self.btn2.frame.origin.y - 60, width: self.self.btn2.frame.width, height: self.self.btn2.frame.height)
+        UIView.animate(withDuration: TimeInterval(speed * 0.5), delay: TimeInterval(speed * 0.3), options: [], animations: {
+            self.twoButtonsView.transform = CGAffineTransform(translationX: 0, y: -60)
+
+        }, completion: nil)
+        UIView.animate(withDuration: TimeInterval(speed * 0.4), delay: TimeInterval(speed * 0.4), options: [], animations: {
+            self.btn2.transform = CGAffineTransform(rotationAngle: self.radians(0))
+            self.btn4.transform = CGAffineTransform(rotationAngle: self.radians(0))
+        }, completion: nil)
+
+        UIView.animate(withDuration: TimeInterval(speed * 0.5), delay: TimeInterval(speed * 0.4), options: [], animations: {
+            self.btn1.transform = CGAffineTransform(translationX: 0, y: -60)
+            self.btn5.transform = CGAffineTransform(translationX: 0, y: -60)
         }, completion: nil)
         
-        UIView.animate(withDuration: 0.5, delay: 0.2, options: [], animations: {
-            self.btn4.frame = CGRect(x: self.self.btn4.frame.origin.x, y: self.self.btn4.frame.origin.y - 60, width: self.self.btn4.frame.width, height: self.self.btn4.frame.height)
+
+        
+        
+    }
+    
+    /*
+     ERROR
+     self.shapeView.transform = CGAffineTransform(translationX: 0, y: 120) doesn't work.
+     Apple Technical Support:
+    iOS 8 is currently exhibiting a known bug in UIKit animations where transform animations get the wrong fromValue (primarily affecting the position of animated objects, making them appear to “jump” unexpectedly at the start on an animation).
+    
+    [...]
+    
+    The workaround until a potential fix is delivered is to drop down to Core Animation APIs to code your animations.
+     */
+    
+    func hideTabBar() {
+        UIView.animate(withDuration: TimeInterval(speed * 1.0), delay: 0.0, options: [], animations: {
+            self.shapeView.transform = CGAffineTransform(translationX: 0, y: 120)
+            
+            self.questionImage.alpha = 0.0
         }, completion: nil)
         
-        UIView.animate(withDuration: 0.5, delay: 0.3, options: [], animations: {
-            self.btn1.frame = CGRect(x: self.self.btn1.frame.origin.x, y: self.self.btn1.frame.origin.y - 60, width: self.self.btn1.frame.width, height: self.self.btn1.frame.height)
+        UIView.animate(withDuration: TimeInterval(speed * 0.5), delay: TimeInterval(speed * 0.14), options: [], animations: {
+            self.btn1.transform = CGAffineTransform(translationX: 0, y: 60)
+            self.btn5.transform = CGAffineTransform(translationX: 0, y: 60)
         }, completion: nil)
         
-        UIView.animate(withDuration: 0.5, delay: 0.3, options: [], animations: {
-            self.btn5.frame = CGRect(x: self.self.btn5.frame.origin.x, y: self.self.btn5.frame.origin.y - 60, width: self.self.btn5.frame.width, height: self.self.btn5.frame.height)
+
+        UIView.animate(withDuration: TimeInterval(speed * 0.5), delay: TimeInterval(speed * 0.2), options: [], animations: {
+            self.twoButtonsView.transform = CGAffineTransform(translationX: 0, y: 60)
+        }, completion: nil)
+        UIView.animate(withDuration: TimeInterval(speed * 0.7), delay: TimeInterval(speed * 0.1), options: [], animations: {
+            self.btn2.transform = CGAffineTransform(rotationAngle: self.radians(-30))
+            self.btn4.transform = CGAffineTransform(rotationAngle: self.radians(30))
+        }, completion: nil)
+        
+
+        UIView.animate(withDuration: TimeInterval(speed * 0.5), delay: TimeInterval(speed * 0.25), options: [], animations: {
+            self.btn3.transform = CGAffineTransform(translationX: 0, y: 60)
         }, completion: nil)
         
         
         
     }
     
-    func hideTabBar() {
-        UIView.animate(withDuration: 1.0, delay: 0.0, options: [], animations: {
-            self.shapeView.frame = CGRect(x: self.shapeView.frame.origin.x, y: self.shapeView.frame.origin.y + 120, width: self.shapeView.frame.width, height: self.shapeView.frame.height)
-            
-            self.questionImage.alpha = 0.0
-        }, completion: nil)
-        
-        UIView.animate(withDuration: 0.5, delay: 0.2, options: [], animations: {
-            self.btn1.frame = CGRect(x: self.self.btn1.frame.origin.x, y: self.self.btn1.frame.origin.y + 60, width: self.self.btn1.frame.width, height: self.self.btn1.frame.height)
-        }, completion: nil)
-        
-        UIView.animate(withDuration: 0.5, delay: 0.2, options: [], animations: {
-            self.btn5.frame = CGRect(x: self.self.btn5.frame.origin.x, y: self.self.btn5.frame.origin.y + 60, width: self.self.btn5.frame.width, height: self.self.btn5.frame.height)
-        }, completion: nil)
-        
-        UIView.animate(withDuration: 0.5, delay: 0.3, options: [], animations: {
-            self.btn2.frame = CGRect(x: self.self.btn2.frame.origin.x, y: self.self.btn2.frame.origin.y + 60, width: self.self.btn2.frame.width, height: self.self.btn2.frame.height)
-        }, completion: nil)
-        
-        UIView.animate(withDuration: 0.5, delay: 0.3, options: [], animations: {
-            self.btn4.frame = CGRect(x: self.self.btn4.frame.origin.x, y: self.self.btn4.frame.origin.y + 60, width: self.self.btn4.frame.width, height: self.self.btn4.frame.height)
-        }, completion: nil)
-        
-        UIView.animate(withDuration: 0.5, delay: 0.4, options: [], animations: {
-            self.btn3.frame = CGRect(x: self.self.btn3.frame.origin.x, y: self.self.btn3.frame.origin.y + 60, width: self.self.btn3.frame.width, height: self.self.btn3.frame.height)
-        }, completion: nil)
-        
-        
-        
+    func radians(_ degrees: Double) -> CGFloat {
+        return CGFloat(degrees * .pi / 180)
     }
 
 }
+
+
+
+/*
+You left out the / 180 on CGFloat(180 * M_PI). Try:
+UIView.animateWithDuration(1.0, animations: {
+self.arrowImageView.transform = CGAffineTransformMakeRotation(CGFloat(M_PI))
+})
+*/
 
